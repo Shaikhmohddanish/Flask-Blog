@@ -1,0 +1,22 @@
+{
+  "params":
+  {
+    "local_server":"True",
+    "local_uri": "mysql://IGp1GjqzDJ:uVphcfH0VR@remotemysql.com/IGp1GjqzDJ",
+    "prod_uri":"mysql://IGp1GjqzDJ:uVphcfH0VR@remotemysql.com/IGp1GjqzDJ",
+    "Danish_linkedin_url": "https://www.linkedin.com/in/shaikhmohddanish/",
+    "Sarfraj_linkedin_url": "https://www.linkedin.com/in/sarfraj-ahmad/",
+    "Sufiyan_linkedin_url": "https://www.linkedin.com/in/sufiyan-sayed-5209051a7/",
+    "Saif_linkedin_url": "https://www.linkedin.com/in/saif-shaikh-039217204/",
+    "blog_name": "IPL 2021",
+    "tag_line": "Welcome to our blog",
+    "gmail-user":"YourGmailIdHere",
+    "gmail-password":"YourPasswordHere",
+    "about_text": "We are from A.I.K.T.C Extc departments and we are the Admin of this blog",
+    "no_of_posts": 6,
+    "login_image":"login.jpg",
+    "admin_user":"Danish",
+    "admin_password": "Aa112233@",
+    "upload_location":"C://Users//danis//OneDrive//Desktop//Desktop Content//LOGIN\testing//static//img"
+  }
+}

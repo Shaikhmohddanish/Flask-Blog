@@ -1,0 +1,57 @@
+{% extends "registerLayout.html" %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 my-3">
+                <h1 class=" display-4 mt-100" style="color:black;font-size: 40px;">Register to connect with us</h1>   
+            </div>
+            <div class="col-md-4 my-3">
+                <div class="card mt-100">
+                    <div class="card-body">
+                        <form class="form" name="myForm1" id="myForm1" onsubmit="return validateForm('myForm1');" method="post" action="/verify">
+                            <label>Name</label><br>
+                            <input type="text" class="form-control" placeholder="Enter your name" name="uname" required>
+                            <label>Email</label><br>
+                            <input type="email" class="form-control" placeholder="Enter your email id" name="uemail" required>
+                            <small id="emailHelp" class="form-text text-muted">OTP will be send to your email</small>
+                            <label>Password</label><br>  
+                            <input type="password" class="form-control" placeholder="Enter a strong password" id="upassword" name="upassword" onkeyup="validatestrength();" required>
+                            <strong id='warn'></strong>
+                            <small id="passwordHelp" class="form-text text-muted">Choose a password that will be upto 8 character.</small>
+                            <label>Re-Enter Password</label><br>  
+                            <input type="password" id="password2" class="form-control" placeholder="Please re-enter your password" name="upassword2" onkeyup='check()'; required>
+                            <strong id='message'></strong>
+                            <br>
+                            <input type="submit" class="btn btn-primary btn-block btn-lg" value="Verify email">
+                        </form>
+                        <p class="mt-2">Already a member?  <a href="/">Login Here</a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+  <script>
+
+        var check = function() {
+      if (document.getElementById('upassword').value ==
+        document.getElementById('password2').value) {
+        document.getElementById('message').style.color = 'green';
+        document.getElementById('message').innerHTML = '';
+      } else {
+        document.getElementById('message').style.color = 'red';
+        document.getElementById('message').innerHTML = 'Password does not Match';
+      }
+    }
+
+    var validatestrength = function(){
+    	var p = document.getElementById('upassword').value;
+    	var msg = document.getElementById('warn');
+    	if (p.length < 8) {
+    		msg.style.color = 'red';
+    		msg.innerHTML = 'Your password must contain upto 8 character';
+    	} else{
+    		msg.innerHTML ="";
+    	}
+    }
+</script>
+{% endblock %}

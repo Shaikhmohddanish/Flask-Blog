@@ -1,0 +1,42 @@
+{% extends "registerLayout.html" %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 my-3">
+                <h1 class=" display-4 mt-100" style="color:black;font-size: 40px;">Kindly log in to see our blog</h1>   
+            </div>
+            <div class="col-md-4 my-3">
+                <div class="card mt-100">
+                    <div class="card-body">
+                        <form class="form" name="myForm" id="myForm" onsubmit="return validateForm('myForm');" method="post" action="/login_validation">
+                            <label>Email</label><br>
+                            <input type="email" class="form-control" placeholder="Enter your email id" name="email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> 
+                            <label>Password</label><br>  
+                            <input type="password" class="form-control" placeholder="Enter your password" name="password">
+                            <br>
+                            <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
+                        </form>
+                        <p class="mt-2">Not a member?  <a href="/register">Create Account</a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>
+<script>
+        function validateForm(formId)
+        {
+            var inputs, index;
+            var form=document.getElementById(formId);
+            inputs = form.getElementsByTagName('input');
+            for (index = 0; index < inputs.length; ++index) {
+                if (inputs[index].value==null || inputs[index].value=="")
+                {
+                    alert("All field is Required to be filled");
+                    return false;
+                }
+            }
+        }
+</script>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block body %}
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/about-bg.jpg') }}');background-size:100% 100%;">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1>About Us</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>{{params['about_text']}}</p>
+          <ul>
+          	<li>
+          		<a href="{{params['Danish_linkedin_url']}}" target="_blank">Shaikh Mohd Danish </a>18ET43
+          	</li>
+          	<li>
+          		<a href="{{params['Sarfraj_linkedin_url']}}" target="_blank">Sarfraj Ahmed </a>18ET33
+          	</li>
+          	<li>
+          		<a href="{{params['Sufiyan_linkedin_url']}}" target="_blank">Sayed Sufiyan </a>18ET34
+          	</li>
+          	<li>
+          		<a href="{{params['Saif_linkedin_url']}}" target="_blank">Shaikh Saif Hisamuddin </a>18ET45
+          	</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+   {% endblock %}
